@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>工具箱 &gt; 批量创建推广位</title>
+  <script src="./background.js"></script>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <a href="./index.html">首页</a>
+    <span> > 批量创建推广位</span>
+  </header>
+  <main>
+    <div id="progress"></div>
+    <form id="configForm">
+      <div class="wrapper">
+        <section class="form-item">
+          <label>创建方式</label>
+          <input type="radio" checked value="auto" name="type" />规律创建
+          <input type="radio" value="normal" name="type" />自定义创建
+        </section>
+        <div id="container">
+        </div>
+        <section class="form-item">
+          <p style="text-align: center;" id="tip"></p>
+        </section>
+        <button class="primary" id="submit" type="submit" style="margin-left: 170px;">开始创建</button>
+        <button type="reset" style="margin-left: 20px;">重置</button>
+      </div>
+    </form>
+  </main>
+  <script src="./page.js"></script>
+</body>
+</html>

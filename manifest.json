@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "taoke-order",
+  "description": "This is a project to get orders from Alimama and sent orders to the local server side",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*.alimama.com/*", "https://*.alimama.com/*", "https://*.taobao.com/*", "http://*.taobao.com/*"],
+      "js": ["scripts/content.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "notifications",
+    "background",
+    "webRequest",
+    "*://*/*",
+    "tabs"
+  ],
+  "web_accessible_resources": ["scripts/xmlHttp.js"],
+  "background": {
+    "persistent": true,
+    "scripts": ["background/background.js"]
+  }
+}

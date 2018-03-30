@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>工具箱 &gt; 导出推广位</title>
+  <script src="./FileSaver.min.js"></script>
+  <script src="./xlsx.js"></script>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <a href="./index.html">首页</a>
+    <span> &gt; 导出推广位</span>
+  </header>
+  <main>
+    <div id="progress"></div>
+    <form id="exportForm">
+        <div class="wrapper">
+          <section class="form-item">
+            <label>所属导购</label>
+            <input type="radio" checked value="0" name="gcid" />网站
+            <input type="radio" value="7" name="gcid" />app
+            <input type="radio" value="8" name="gcid" />导购
+          </section>
+          <section class="form-item">
+            <label>导出起始页面</label>
+            <input min="1" type="number" id="start" required name="start" placeholder="从哪一页开始导出" />
+          </section>
+          <section class="form-item">
+            <label>导出终止页</label>
+            <input min="1" type="number" id="end" required name="end" placeholder="到哪一页结束" />
+          </section>
+          <section class="form-item">
+            <label>获取数据翻页间隔时间</label>
+            <input min="2" type="number" id="gap" required name="gap" placeholder="最低不能小于2s" />
+          </section>
+          <section class="form-item" id="tip">
+            <p>批量导出分为两个步骤：</p>
+            <p>第一步是数据获取阶段，插件会自动搜集从开始页到截至页所有推广位数据；</p>
+            <p>第二步是数据导出，插件会根据第一步搜集到的推广位数据导出为excel表格</p>
+            <p>每一页数据的获取间隔的平均时间大约为3s，请耐性等待</p>
+            <p>目前每页数据分页为40条/页</p>
+            <p>注意：目前导出的推广位是阿里妈妈淘宝联盟后台的“推广管理 > 推广位管理 > 导购推广位”处的推广位</p>
+          </section>
+          <button class="primary" id="submit" type="submit" style="margin-left: 220px;">开始导出</button>
+          <button type="reset" style="margin-left: 20px;">重置</button>
+        </div>
+      </form>
+  </main>
+  <script src="./export.js"></script>
+</body>
+</html>

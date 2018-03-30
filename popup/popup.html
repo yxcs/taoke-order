@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      width: 100px;
+      height: 100px;
+      line-height: 40px;
+      text-align: center;
+    }
+    button {
+      padding: 5px 10px;
+      border: none;
+    }
+    #restart {
+      background: #ff3333;
+      cursor: pointer;
+      color: white;
+    }
+    #restart:hover {
+      background: #ff8888;
+    }
+    #restore{
+      background: #20A0FF;
+      cursor: pointer;
+      color: white;
+    }
+
+    #restore:hover {
+      background: #58B7FF;
+    }
+    #tools {
+      background: rgb(69, 176, 116);
+      cursor: pointer;
+      color: white;
+    }
+    #tools:hover {
+      background: rgba(69, 176, 116, .8);
+    }
+  </style>
+</head>
+<body>
+  <p><button id="restart">重启</button></p>
+  <p><button id="restore">恢复</button></p>
+  <p style="margin-bottom: 12px;"><button id="tools">实用工具</button></p>
+  <script src="popup.js"></script>
+</body>
+</html>
